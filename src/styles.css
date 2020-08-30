@@ -1,0 +1,77 @@
+.select {
+  padding: 10px 20px;
+  width: 80%;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .title {
+  margin-top: 40px;
+}
+
+.container-data {
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 90%;
+  height: 60vh;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 3px 3px 20px #ccc;
+          box-shadow: 3px 3px 20px #ccc;
+  background: url("./assets/bg.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.container-data .clock {
+  width: 100%;
+  padding-left: 30px;
+}
+
+.container-data span {
+  font-weight: bold;
+}
+
+.container-data h1,
+.container-data h3,
+.container-data h5,
+.container-data h6 {
+  letter-spacing: 1px;
+}
+
+.container-data h6 {
+  font-weight: 300;
+}
+
+.container-data h5 {
+  font-size: 20px;
+  font-weight: 300;
+}
+/*# sourceMappingURL=styles.css.map */
