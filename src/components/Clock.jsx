@@ -11,7 +11,7 @@ export default function Clock() {
 
   return (
     <h1 className="clock">
-      {hours} : {minutes}
+      {minutes < 10 ? `${hours} : 0${minutes}` : `${hours} : ${minutes}`}
     </h1>
   );
 }

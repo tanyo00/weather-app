@@ -1,6 +1,7 @@
 import React from "react";
 import cities from "./cities";
 import Clock from "./components/Clock";
+import styled from "styled-components";
 import {
   InputLabel,
   Select,
@@ -9,6 +10,10 @@ import {
 } from "@material-ui/core";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
+
+const Circle = styled(CircularProgress)`
+  top: 100px;
+`;
 
 export default function App() {
   const [city, setCity] = React.useState("Sofia");
@@ -22,20 +27,16 @@ export default function App() {
         console.log(data);
         setCityData(data);
       });
-  }, [city]);
+  });
 
   return (
     <div className="main-container">
       <InputLabel className="title">Choose a city</InputLabel>
-      <Select
-        labelId="label"
-        className="select"
-        value={city}
-        placeholder="Enter a city..."
-      >
+      <Select labelId="label" className="select" value={city}>
         {cities.map((item, index) => {
           return (
             <MenuItem
+              key={index}
               onClick={() => {
                 setCity(`${item}`);
               }}
@@ -64,7 +65,7 @@ export default function App() {
           </h6>
         </div>
       ) : (
-        <CircularProgress color="primary" />
+        <Circle color="primary" />
       )}
     </div>
   );
